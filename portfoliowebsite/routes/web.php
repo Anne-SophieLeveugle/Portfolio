@@ -12,5 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/detail', function () {
+    return view('detail');
+});
+
+Route::get('/work', function () {
+    return view('work');
+});
+
+//data naar server = post request
