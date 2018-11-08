@@ -7,11 +7,10 @@
 </head>
 <body>
 @include('includes.nav')
-@if(Request::is('/'))
+@if(Request::is('work'))
     @include('includes.extra')
     @endif
     @yield('content')
-
-    @include('includes.extracontent')
+<script src="js/app.js"></script>
 </body>
 </html>

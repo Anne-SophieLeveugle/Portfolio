@@ -6498,7 +6498,7 @@ function adoptValue( value, resolve, reject, noValue ) {
 		}
 
 	// For Promises/A+, convert exceptions into rejections
-	// Since jQuery.when doesn't unwrap thenables, we can skip the includes checks appearing in
+	// Since jQuery.when doesn't unwrap thenables, we can skip the extra checks appearing in
 	// Deferred#then to conditionally suppress rejection.
 	} catch ( value ) {
 
@@ -13894,6 +13894,8 @@ module.exports = __webpack_require__(43);
  */
 
 __webpack_require__(13);
+
+__webpack_require__(48);
 
 window.Vue = __webpack_require__(36);
 
@@ -32692,7 +32694,7 @@ module.exports = function(module) {
           }
 
           this._popper = new Popper(referenceElement, this._menu, this._getPopperConfig());
-        } // If this is a touch-enabled device we add includes
+        } // If this is a touch-enabled device we add extra
         // empty mouseover listeners to the body's immediate children;
         // only needed because of broken event delegation on iOS
         // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
@@ -32883,7 +32885,7 @@ module.exports = function(module) {
 
           if (hideEvent.isDefaultPrevented()) {
             continue;
-          } // If this is a touch-enabled device we remove the includes
+          } // If this is a touch-enabled device we remove the extra
           // empty mouseover listeners we added for iOS support
 
 
@@ -33846,7 +33848,7 @@ module.exports = function(module) {
               _this._handlePopperPlacementChange(data);
             }
           });
-          $$$1(tip).addClass(ClassName.SHOW); // If this is a touch-enabled device we add includes
+          $$$1(tip).addClass(ClassName.SHOW); // If this is a touch-enabled device we add extra
           // empty mouseover listeners to the body's immediate children;
           // only needed because of broken event delegation on iOS
           // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
@@ -33910,7 +33912,7 @@ module.exports = function(module) {
           return;
         }
 
-        $$$1(tip).removeClass(ClassName.SHOW); // If this is a touch-enabled device we remove the includes
+        $$$1(tip).removeClass(ClassName.SHOW); // If this is a touch-enabled device we remove the extra
         // empty mouseover listeners we added for iOS support
 
         if ('ontouchstart' in document.documentElement) {
@@ -38135,7 +38137,7 @@ function checkProp (
 //
 // For plain HTML markup, normalization can be completely skipped because the
 // generated render function is guaranteed to return Array<VNode>. There are
-// two cases where includes normalization is needed:
+// two cases where extra normalization is needed:
 
 // 1. When the children contains components - because a functional component
 // may return an Array instead of a single root. In this case, just a simple
@@ -42846,7 +42848,7 @@ function model (
 
   if (el.component) {
     genComponentModel(el, value, modifiers);
-    // component v-model doesn't need includes runtime
+    // component v-model doesn't need extra runtime
     return false
   } else if (tag === 'select') {
     genSelect(el, value, modifiers);
@@ -42858,7 +42860,7 @@ function model (
     genDefaultModel(el, value, modifiers);
   } else if (!config.isReservedTag(tag)) {
     genComponentModel(el, value, modifiers);
-    // component v-model doesn't need includes runtime
+    // component v-model doesn't need extra runtime
     return false
   } else if (true) {
     warn$1(
@@ -47413,6 +47415,36 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */
+/***/ (function(module, exports) {
+
+(function ($) {
+    $(document).ready(function () {
+
+        // hide .navbar first
+        $(".navbar").hide();
+
+        // fade in .navbar
+        $(function () {
+            $(window).scroll(function () {
+                // set distance user needs to scroll before we start fadeIn
+                if ($(this).scrollTop() > 400) {
+                    $('.navbar').fadeIn();
+                } else if ($(this).scrollTop() > 50) {
+                    $('.scroll').fadeOut();
+                } else {
+                    $('.navbar').fadeOut();
+                }
+            });
+        });
+    });
+})(jQuery);
 
 /***/ })
 /******/ ]);

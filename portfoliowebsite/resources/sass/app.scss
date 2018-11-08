@@ -2,6 +2,10 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+
+// Custom
+@import 'custom';
+
 // Variables
 @import 'variables';
 
@@ -12,6 +16,3 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
-
-// Custom
-@import 'custom';
