@@ -8,9 +8,6 @@
             <li class="nav-item {{Request::is('admin.create') ? 'active' : ''}}">
                 <a class="nav-link" href="{{ route('admin.create') }}">Create</a>
             </li>
-            <li class="nav-item {{Request::is('admin.edit') ? 'active' : ''}}">
-                <a class="nav-link" href="{{ route('admin.edit') }}">Edit</a>
-            </li>
             <li class="nav-item {{Request::is('admin.index') ? 'active' : ''}}">
                 <a class="nav-link" href="{{ route('admin.index') }}">Index</a>
             </li>

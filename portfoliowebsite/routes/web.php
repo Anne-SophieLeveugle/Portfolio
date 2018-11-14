@@ -12,7 +12,8 @@
 */
 
 //werken
-Route::get('/', function () {
+
+Route::get('/home', function () {
     return view('content.index');
 })->name('home');
 
@@ -24,44 +25,56 @@ Route::get('/contact', function () {
     return view('content.contact');
 })->name('contact');
 
-Route::get('/detail', function () {
-    return view('content.detail');
-})->name('detail');
+Route::get('/work', [
+    'uses' => 'ItemController@getWork',
+    'as' => 'work'
+]);
 
-Route::get('/work', function () {
-    return view('content.work');
-})->name('work');
+
+
 
 //detail
-Route::get('/work/{id}', function ($id) {
-    return view('content.detail', ['nieuweVariabele' => $id]);
-})->name('detail');
+Route::get('/detail/{id}', [
+    'uses' => 'ItemController@getWorkById',
+    'as' => 'detail'
+]);
+
+
+Route::get('/detail/{id}/like', [
+    'uses' => 'ItemController@getLikeWork',
+    'as' => 'worklike'
+]);
+
+
+
+//edit item route
+/*Route::post('/itemedit', function(){
+    return redirect()->route('admin.index');
+})->name('itemedit');*/
+
+
+Route:: post('itemCreate', [
+   'uses' => 'ItemController@postCreateWork',
+   'as' => 'itemCreate'
+]);
+
+Route:: post('adminupdate', [
+    'uses' => 'AdminController@postUpdateWork',
+    'as' => 'adminupdate'
+]);
+
+
+
+
 
 //admin
-Route::name('admin.')->group(function () {
-    Route::get('/admincreate', function () {
-        return view('admin.create');
-    })->name('create');
-
-    Route::get('/adminedit', function () {
-        return view('admin.edit');
-    })->name('edit');
-
-    Route::get('/adminindex', function () {
-        return view('admin.index');
-    })->name('index');
-
-});
-
-//data naar server = post request
-
 Route::group(['prefix' => 'admin'], function () {
     Route::get('', [
         'uses' => 'AdminController@getIndex',
         'as' => 'admin.index'
     ]);
 
-    Route::get('edit', [
+    Route::get('edit/{id}', [
         'uses' => 'AdminController@getEdit',
         'as' => 'admin.edit'
     ]);
@@ -70,4 +83,12 @@ Route::group(['prefix' => 'admin'], function () {
         'uses' => 'AdminController@getCreate',
         'as' => 'admin.create'
     ]);
+    Route::get('delete/{id}', [
+        'uses' => 'AdminController@getDelete',
+        'as' => 'admin.delete'
+    ]);
+
 });
+Auth::routes();
+
+Route::get('/admin', 'HomeController@index')->name('home');
