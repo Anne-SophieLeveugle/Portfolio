@@ -31,13 +31,15 @@ class AdminController extends Controller
     public function postUpdateWork(Request $request){
         $this->validate($request, [
             'title' => 'required|max:20',
-            'content' => 'required|min:10'
+            'content' => 'required|min:10',
+            'image' => 'required|min:10'
         ]);
 
         $werk = Work::find($request->input('id'));
 
         $werk->title = $request->input('title');
         $werk->content = $request->input('content');
+        $werk->image = $request->input('image');
 
         $werk->save();
 

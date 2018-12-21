@@ -69,7 +69,7 @@ Route:: post('adminupdate', [
 
 //admin
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('', [
+    Route::get('index', [
         'uses' => 'AdminController@getIndex',
         'as' => 'admin.index'
     ]);

@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Anne-Sophie
+                    <img src="img_1303.jpg" alt="profielfoto"/>
                 </div>
 
                 <div class="links">
