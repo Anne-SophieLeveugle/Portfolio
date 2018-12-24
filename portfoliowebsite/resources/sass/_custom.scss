@@ -38,6 +38,8 @@ body {
   background: #C4B8EA no-repeat;
   height: 75vh;
   width: 100%;
+  position: absolute;
+  z-index: -9999;
 }
 
 .start {
@@ -328,4 +330,97 @@ footer ul li {
 
 .contentabout {
   margin-top: -100px;
+}
+
+.nietverbergen {
+  display: block !important;
+}
+
+#carouselExampleIndicators {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-inner img {
+  max-height: 500px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.werktitel {
+  margin-left: 10%;
+  color: white;
+}
+
+.werktitel1 {
+  margin-left: 10%;
+  color: #C4B8EA;
+}
+
+.contentwerk {
+  width: 65%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.contentwerk p {
+  margin-top: 30px;
+  line-height: 30px;
+}
+
+.contentwerk h3 {
+  color: #1b4b72;
+}
+
+.likeswork {
+  width: 65%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 150px;
+}
+
+.apartwerk{
+  width: 25%;
+  margin-right: 7%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.titelwerk {
+  color: #C4B8EA;
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+.werken {
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paginationwork {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.pagination {
+  display: inline-block !important;
+}
+
+.page-item {
+  display: inline-block !important;
+}
+
+.groottetitel {
+  font-size: 50px;
 }

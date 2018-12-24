@@ -15,11 +15,12 @@
         <div class="clearfix">
         <div class="overmij">
         <h2 id="overmij">Over mij</h2>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerc
-            i tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
-            commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et a
-            ccumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-            Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed </p>
+        <p>Hallo! Ik ben een laatstejaarsstudente Multimedia- en communicatietechnologie aan de Erasmus Hogeschool Brussel.
+
+            Wat me erg aanspreekt aan mijn richting is het creatieve aspect. Tijdens mijn opleiding heb ik verschillende keren rond branding, promotiecampagnes en online marketing gewerkt. Ik zoek graag creatieve oplossingen voor problemen, gericht op de juiste doelgroepen.
+
+
+        </p>
         </div>
         <div class="navhome">
             <ul>
@@ -40,7 +41,7 @@
                 <li><a class="nav-link" href="{{ route('work') }}"><span>03</span>Work</a></li>
                 <li><a class="nav-link" href="{{ route('contact') }}"><span>04</span>Contact</a></li>
             </ul>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam</p>
+            <p>Tijdens mijn studie en werkervaringen ben ik al verschillende keren in aanraking gekomen met branding en online marketing. Door vakken als online marketing, cross-media design en concept design werd ik enthousiast om als marketeer aan de slag te gaan en hierover nog vele nieuwe technieken en werkwijzen te ontdekken.</p>
         </div>
             <img src="./images/zee.jpg" alt="image" class="imagezee"/>
         </div>

@@ -23,6 +23,6 @@ class Work extends Model
     }
 
     public function getTitleAttribute($value){
-        return strtoupper($value);
+        return ucfirst($value);
     }
 }

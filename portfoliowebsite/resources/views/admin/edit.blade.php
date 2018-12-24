@@ -3,6 +3,7 @@
 @section('content')
     <h1>edit</h1>
     <div class="container">
+        @include('includes.error')
         <form method="post" action="{{route('adminupdate')}}">
             <div class="form-group">
                 <label for="title">Titel</label>

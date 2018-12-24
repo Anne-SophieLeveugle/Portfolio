@@ -12,7 +12,7 @@ class ItemController extends Controller
 {
     public  function getWork(){
 
-        $werken = Work::orderBy('created_at', 'desc')->paginate(2);
+        $werken = Work::orderBy('created_at', 'desc')->paginate(3);
         return view('content.work',
             ['werken' => $werken]);
     }

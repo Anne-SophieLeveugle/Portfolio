@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" style="margin-top: 240px">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Dashboard</div>
@@ -13,11 +12,10 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    <h3>Voeg werk toe</h3>
+                    <a href="{{ route('admin.create') }}" class="btn btn-primary">Nieuw werk</a>
                 </div>
             </div>
         </div>
-    </div>
 </div>
 @endsection

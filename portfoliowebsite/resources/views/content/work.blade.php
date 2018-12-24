@@ -1,19 +1,21 @@
 @extends('Layout.basic')
 
 @section('content')
-    <h1>Work</h1>
-    <div class="container">
+    <div class="something" style="padding-top: 240px;">
+    <h1  id="overmij" class="werktitel1 groottetitel">Werken</h1>
+        <div class="werken">
         @foreach($werken as $werk)
-        <div class="jumbotron">
-            <h1 class="display-4">{{$werk['title']}}</h1>
-            <hr class="my-4">
+        <div class="apartwerk">
             @foreach($werk->tags as $tag)
                 <p><b>- {{$tag->name}} -</b></p>
-                @endforeach
-            <p>{{$werk['content']}}</p>
-            <a class="btn btn-primary btn-lg" href="{{ route('detail', ['id' => $werk['id']]) }}" role="button">Details</a>
+            @endforeach
+            <a href="{{ route('detail', ['id' => $werk['id']]) }}" role="button"><img  class="imagework" src="./images/IMG_1715.jpg" alt="image" style="width: 100%;"/> </a>
+                <h1 class="titelwerk">{{$werk['title']}}</h1>
         </div>
         @endforeach
-        {{$werken->links()}}
+            <div class="text-center paginationwork">
+       {{$werken->links()}}
+            </div>
+        </div>
     </div>
 @endsection

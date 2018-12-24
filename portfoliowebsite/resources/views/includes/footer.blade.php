@@ -1,5 +1,5 @@
 <footer>
-    <img src="./images/logopaars.png" alt="logo" class="imagefooter">
+    <img src="{{ URL::asset('images/logopaars.png') }}" alt="logo" class="imagefooter">
     <h3>Anne-Sophie Leveugle</h3>
     <div class="listsfooter">
     <ul>

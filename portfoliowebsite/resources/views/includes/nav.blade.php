@@ -16,9 +16,6 @@
             <li class="nav-item {{Request::is('contact') ? 'active' : ''}}">
                 <a class="nav-link" href="{{ route('contact') }}">Contact</a>
             </li>
-            <li class="nav-item {{Request::is('contact') ? 'active' : ''}}">
-                <a class="nav-link" href="{{ route('admin.index') }}">Contact</a>
-            </li>
         </ul>
     </div>
 </nav>

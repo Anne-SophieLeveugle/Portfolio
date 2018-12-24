@@ -10,16 +10,27 @@ class UsersTableSeeder extends Seeder
      *
      * @return void
      */
+
+
+    Public function setPasswordAttribute($password)
+    {
+        return $this->attributes['password'] = bcrypt($password);
+    }
+
     public function run()
     {
         $user = new User([
+            'username' => 'admin',
+            'password' => bcrypt('123456'),
             'name' => 'admin',
-            'password' => '12345'
+            'email' => 'admin@example.be'
         ]);
         $user->save();
         $user = new User([
+            'username' => 'gebruiker',
+            'password' => bcrypt('67890'),
             'name' => 'gebruiker',
-            'password' => '67890'
+            'email' => 'gebruiker@example.be'
         ]);
         $user->save();
     }

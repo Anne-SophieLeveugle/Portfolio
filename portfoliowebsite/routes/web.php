@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -72,23 +74,31 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('index', [
         'uses' => 'AdminController@getIndex',
         'as' => 'admin.index'
-    ]);
+    ])->middleware('auth');;
 
     Route::get('edit/{id}', [
         'uses' => 'AdminController@getEdit',
         'as' => 'admin.edit'
-    ]);
+    ])->middleware('auth');;
 
     Route::get('create', [
         'uses' => 'AdminController@getCreate',
         'as' => 'admin.create'
-    ]);
+    ])->middleware('auth');;
     Route::get('delete/{id}', [
         'uses' => 'AdminController@getDelete',
         'as' => 'admin.delete'
-    ]);
+    ])->middleware('auth');;
 
 });
+
+
+//Auth::routes();
+
+//Route::get('/admin', 'ManagedController@index')->name('home');
+
 Auth::routes();
 
-Route::get('/admin', 'HomeController@index')->name('home');
+Route::get('/managed', 'ManagedController@index');
+
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
