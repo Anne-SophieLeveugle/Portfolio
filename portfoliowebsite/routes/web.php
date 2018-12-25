@@ -89,6 +89,10 @@ Route::group(['prefix' => 'admin'], function () {
         'uses' => 'AdminController@getDelete',
         'as' => 'admin.delete'
     ])->middleware('auth');;
+    Route::get('deleteimage/{id}', [
+        'uses' => 'AdminController@getDeleteImage',
+        'as' => 'admin.delete.image'
+    ])->middleware('auth');;
 
 });
 

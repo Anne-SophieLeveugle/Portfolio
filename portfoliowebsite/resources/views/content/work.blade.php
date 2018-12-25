@@ -6,10 +6,14 @@
         <div class="werken">
         @foreach($werken as $werk)
         <div class="apartwerk">
-            @foreach($werk->tags as $tag)
-                <p><b>- {{$tag->name}} -</b></p>
+            <a href="{{ route('detail', ['id' => $werk['id']]) }}" role="button">
+            @foreach($werk->images as $image)
+                @if ($loop->first)
+                        <img  class="imagework" src="{{ URL::asset($image->imagepath) }}" alt="image" style="width: 100%;"/>
+                @endif
             @endforeach
-            <a href="{{ route('detail', ['id' => $werk['id']]) }}" role="button"><img  class="imagework" src="./images/IMG_1715.jpg" alt="image" style="width: 100%;"/> </a>
+
+            </a>
                 <h1 class="titelwerk">{{$werk['title']}}</h1>
         </div>
         @endforeach

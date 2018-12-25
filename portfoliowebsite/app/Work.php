@@ -9,6 +9,9 @@ class Work extends Model
 
     protected $fillable = ['title', 'content'];
 
+    public function images(){
+        return $this->hasMany('App\Image');
+    }
 
     public function likes(){
         return $this->hasMany('App\Like');

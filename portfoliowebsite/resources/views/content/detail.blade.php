@@ -6,21 +6,16 @@
         <h1 id="overmij" class="werktitel groottetitel">{{$werk->title}}</h1>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                @foreach($werk->images as $image)
+                <li data-target="#carouselExampleIndicators" data-slide-to="{{ $loop->index }}" class="{{ $loop->first ? 'active' : '' }}"></li>
+                @endforeach
             </ol>
             <div class="carousel-inner" style=" width:100%; height: 500px !important;">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="{{ URL::asset('images/IMG_1715.jpg') }}" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="{{ URL::asset('images/aboutme.jpg') }}" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="{{ URL::asset('images/profielfoto.jpg') }}" alt="Third slide">
-                </div>
-            </div>
+                @foreach($werk->images as $image)
+                    <div class="carousel-item {{ $loop->first ? ' active' : '' }}">
+                        <img id="{{ $image->index }}" class="d-block w-100" src="{{ URL::asset($image->imagepath) }}" alt="First slide">
+                    </div>
+                @endforeach
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>

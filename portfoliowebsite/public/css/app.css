@@ -393,10 +393,17 @@ footer ul li {
   vertical-align: top;
 }
 
+.apartwerk img {
+  height: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .titelwerk {
   color: #C4B8EA;
   margin-top: 40px;
   font-size: 20px;
+  text-align: center;
 }
 
 .werken {
@@ -424,6 +431,17 @@ footer ul li {
 
 .groottetitel {
   font-size: 50px;
+}
+
+.titeladmin {
+  color: white;
+  margin-left: 10%;
+  font-family: beauty;
+  font-size: 65px;
+}
+
+.navbar {
+  display: block !important;
 }
 
 /*!

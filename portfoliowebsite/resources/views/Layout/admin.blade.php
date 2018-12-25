@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>Anne-Sophie</title>
+    <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}"/>
 </head>
 <body>
 @include('includes.master-header')
